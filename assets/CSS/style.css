@@ -1,0 +1,96 @@
+header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7vw;
+
+    ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .icons {
+        width: 338px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        background: linear-gradient(100deg, #2ac4ff 2.57%, #0d88bb 95.91%);
+        gap: 4vw;
+        padding: 4vw 4vw 4vw 0;
+        transition: opacity .3s, clip-path .3s;
+        clip-path: circle(0% at 89% 50%);
+        opacity: 0;
+
+        .imgCircle {
+            margin-left: -20%;
+            width: 35vw;
+        }
+
+        .content {
+
+            h2 {
+                font-size: 4.7vw;
+            }
+
+            p {
+                width: 85%;
+                font-size: clamp(14px 1vw 20px);
+            }
+
+            button {
+                margin-top: 2vw;
+                padding: 16px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 2px solid rgba(255, 255, 255, 0.8);
+                border-radius: 4px;
+            }
+        }
+
+        .cans {
+            display: flex;
+
+            img {
+                width: 14vw;
+            }
+
+            img:nth-child(2) {
+                scale: .8;
+            }
+        }
+    }
+
+    .slide.active {
+        clip-path: circle(95vw at 89% 50%);
+        opacity: 1;
+    }
+
+    .slide:nth-child(2) {
+        background: linear-gradient(100deg, #ff849d 2.57%, #c5566a 95.91%);
+    }
+
+    .slide:nth-child(3) {
+        background: linear-gradient(100deg, #ff8917 2.57%, #d06000 95.91%);
+    }
+
+    .slide:nth-child(4) {
+        background: linear-gradient(100deg, #008e5e 2.57%, #005235 95.91%);
+    }
+}
